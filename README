@@ -1,0 +1,35 @@
+/***********************************************************************
+ * Project: Disk Scheduling Simulation
+ * Author: Logan Wheat
+ * Modification History: 11/17/19 : wrote the code: Logan Wheat
+ * struct:
+ *point - stores data such as track, sector, and whether it has been accessed or not
+ *
+ * Procedures:
+ *main - driver function of program. Generates random input streams with no duplicates
+ *for each experiment, runs each of disk the scheduling algorithms per experiment
+ *properly storing the average seek times, and outputs the average seek times
+ *calculated over the 1000 experiments for sizes 500-1000 to both standard out
+ *and a .csv file to properly generate line graph for report.
+ *
+ *uniform - uniform random number generator that returns an int between perameters.
+ *
+ *swap - function to aid bubble sort by swapping points passed by reference.
+ *
+ *sortRequest - sorts passed request of points utilizing bubble sort (was
+ *having issues with qsort).
+ *
+ *outputRequest - function to output array of points, used mostly for
+ *debugging. Not called during main, but kept for useful tool.
+ *
+ *checkSector - function called to ensure sector value stays in range 0-12000,
+ *essentially simulates the disk completing a rotation.
+ *
+ *fifo - simulates a first in first out disk scheduling algorithm.
+ *
+ *sstf - simulates a shortest service time first disk scheduling algorithm.
+ *
+ *scan - simulates a scan disk scheduling algorithm.
+ *
+ *cscan - simulates a circular scan disk scheduling algorithm.
+ ***********************************************************************/
